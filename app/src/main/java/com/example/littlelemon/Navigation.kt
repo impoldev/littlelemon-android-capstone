@@ -9,7 +9,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 
 @Composable
-fun Navigation() {
+fun Navigation(database: MenuDao) {
     val navController = rememberNavController()
     val context = LocalContext.current
 
@@ -26,7 +26,7 @@ fun Navigation() {
         startDestination = startDestination
     ) {
         composable(Home.route) {
-            Home(navController = navController)
+            Home(navController = navController, database)
         }
         composable(Profile.route) {
             Profile(navController = navController)

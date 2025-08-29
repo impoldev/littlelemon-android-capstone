@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    id("org.jetbrains.kotlin.kapt")
+    id("org.jetbrains.kotlin.plugin.serialization")
 }
 
 android {
@@ -40,6 +42,13 @@ android {
 }
 
 dependencies {
+    implementation("com.github.bumptech.glide:compose:1.0.0-alpha.1")
+    implementation("androidx.compose.runtime:runtime-livedata")
+    implementation("androidx.room:room-runtime:2.7.2")
+    add("kapt", "androidx.room:room-compiler:2.7.2")
+    implementation("io.ktor:ktor-client-android:3.2.3")
+    implementation("io.ktor:ktor-client-content-negotiation:3.2.3")
+    implementation("io.ktor:ktor-serialization-kotlinx-json:3.2.3")
     implementation("androidx.navigation:navigation-compose:2.9.3")
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
