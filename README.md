@@ -35,3 +35,12 @@ Little Lemon is a sample restaurant app that allows users to explore menu items 
 - **Serialization** of JSON data using Kotlin Serialization.
 - **Annotation Processing** with Kapt.
 - Android libraries and Material Design components.
+
+## Acknowledgments
+Meta for designing all the Meta Android Developer courses and allowing me to showcase my skills.
+Coursera team for hosting these courses on their platform.
+
+## Contact
+GitHub: https://github.com/impoldev
+LinkedIn: https://www.linkedin.com/in/pabloolle/
+Email: contact@impol.dev
