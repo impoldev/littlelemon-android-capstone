@@ -23,6 +23,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -69,6 +71,7 @@ fun Profile(navController: NavController) {
             ) {
                 Text(
                     text = "Profile information:",
+                    fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)),
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Bold,
                     modifier = Modifier
@@ -77,50 +80,50 @@ fun Profile(navController: NavController) {
                 )
 
                 Column (modifier = Modifier.padding(bottom = 20.dp)) {
-                    Text(text = "First name", modifier = Modifier.padding(bottom = 5.dp))
+                    Text(text = "First name", fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)), modifier = Modifier.padding(bottom = 5.dp))
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
                             .border(
                                 width = 1.dp,
-                                color = Color.Black,
+                                color = Color(0XFF333333),
                                 shape = RoundedCornerShape(8.dp)
                             )
                             .padding(15.dp)
                     ) {
-                        Text(text = first)
+                        Text(text = first, fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)))
                     }
                 }
 
                 Column (modifier = Modifier.padding(bottom = 20.dp)) {
-                    Text(text = "Last name", modifier = Modifier.padding(bottom = 5.dp))
+                    Text(text = "Last name", fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)), modifier = Modifier.padding(bottom = 5.dp))
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
                             .border(
                                 width = 1.dp,
-                                color = Color.Black,
+                                color = Color(0XFF333333),
                                 shape = RoundedCornerShape(8.dp)
                             )
                             .padding(15.dp)
                     ) {
-                        Text(text = last)
+                        Text(text = last, fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)))
                     }
                 }
 
                 Column (modifier = Modifier.padding(bottom = 20.dp)) {
-                    Text(text = "Email", modifier = Modifier.padding(bottom = 5.dp))
+                    Text(text = "Email", fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)), modifier = Modifier.padding(bottom = 5.dp))
                     Box(
                         modifier = Modifier
                             .fillMaxWidth()
                             .border(
                                 width = 1.dp,
-                                color = Color.Black,
+                                color = Color(0XFF333333),
                                 shape = RoundedCornerShape(8.dp)
                             )
                             .padding(15.dp)
                     ) {
-                        Text(text = email)
+                        Text(text = email, fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)))
                     }
                 }
 
@@ -140,7 +143,12 @@ fun Profile(navController: NavController) {
                     .fillMaxWidth()
                     .padding(start = 16.dp, end = 16.dp, bottom = 16.dp)
             ) {
-                Text(text = "Logout", color = Color(0xFF485E57))
+                Text(
+                    text = "Logout",
+                    color = Color(0xFF485E57),
+                    fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)),
+                    fontWeight = FontWeight.Bold
+                )
             }
         }
     }

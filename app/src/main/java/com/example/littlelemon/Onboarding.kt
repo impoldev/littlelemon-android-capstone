@@ -28,6 +28,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -75,6 +77,7 @@ fun Onboarding(navController: NavController) {
                 ) {
                     Text(
                         text = "Let's get to know you",
+                        fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)),
                         fontSize = 20.sp,
                         color = Color.White
                     )
@@ -87,6 +90,7 @@ fun Onboarding(navController: NavController) {
                 ) {
                     Text(
                         text = "Personal information",
+                        fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)),
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold,
                         modifier = Modifier
@@ -95,10 +99,10 @@ fun Onboarding(navController: NavController) {
                     )
 
                     Column {
-                        Text(text = "First name", modifier = Modifier.padding(bottom = 5.dp))
+                        Text(text = "First name", fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)), modifier = Modifier.padding(bottom = 5.dp))
                         TextField(
                             value = firstName,
-                            placeholder = { Text(text = "Mike") },
+                            placeholder = { Text(text = "Mike", fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal))) },
                             onValueChange = { firstName = it },
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -107,10 +111,10 @@ fun Onboarding(navController: NavController) {
                     }
 
                     Column {
-                        Text(text = "Last Name", modifier = Modifier.padding(bottom = 5.dp))
+                        Text(text = "Last Name", fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)), modifier = Modifier.padding(bottom = 5.dp))
                         TextField(
                             value = lastName,
-                            placeholder = { Text(text = "Jones") },
+                            placeholder = { Text(text = "Jones", fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal))) },
                             onValueChange = { lastName = it },
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -119,10 +123,10 @@ fun Onboarding(navController: NavController) {
                     }
 
                     Column {
-                        Text(text = "Email", modifier = Modifier.padding(bottom = 5.dp))
+                        Text(text = "Email", fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)), modifier = Modifier.padding(bottom = 5.dp))
                         TextField(
                             value = email,
-                            placeholder = { Text(text = "mike@example.com") },
+                            placeholder = { Text(text = "mike@example.com", fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal))) },
                             onValueChange = { email = it },
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -158,7 +162,12 @@ fun Onboarding(navController: NavController) {
                     .fillMaxWidth()
                     .padding(start = 16.dp, end = 16.dp, bottom = 16.dp)
             ) {
-                Text(text = "Register", color = Color(0xFF485E57))
+                Text(
+                    text = "Register",
+                    fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)),
+                    color = Color(0xFF485E57),
+                    fontWeight = FontWeight.Bold
+                )
             }
         }
     }

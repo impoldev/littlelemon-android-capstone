@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -40,6 +41,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalInspectionMode
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
@@ -92,7 +95,7 @@ fun Home(navController: NavController, database: MenuDao) {
                         modifier = Modifier
                             .border(
                                 width = 1.dp,
-                                color = Color.Gray,
+                                color = Color(0X55333333),
                                 shape = RoundedCornerShape(percent = 100)
                             )
                     )
@@ -112,13 +115,16 @@ fun Home(navController: NavController, database: MenuDao) {
                     Column {
                         Text(
                             text = "Little Lemon",
-                            fontSize = 40.sp,
+                            fontSize = 50.sp,
+                            fontFamily = FontFamily(Font(R.font.markazitext_regular, FontWeight.Normal)),
                             color = Color(0xFFF4CE14)
                         )
                         Text(
                             text = "Chicago",
-                            fontSize = 22.sp,
-                            color = Color.White
+                            modifier = Modifier.offset(y = (-8).dp),
+                            fontFamily = FontFamily(Font(R.font.markazitext_regular, FontWeight.Normal)),
+                            fontSize = 30.sp,
+                            color = Color.White,
                         )
 
                         Row(
@@ -126,21 +132,23 @@ fun Home(navController: NavController, database: MenuDao) {
                             verticalAlignment = Alignment.CenterVertically,
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .padding(bottom = 20.dp)
+                                .padding(bottom = 10.dp)
+                                .offset(y = (-8).dp)
                         ) {
                             Text(
                                 text = "We are a family-owned Mediterranean restaurant, focused on traditional recipes served with a modern twist",
+                                fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)),
                                 fontSize = 16.sp,
                                 color = Color.White,
-                                modifier = Modifier.fillMaxWidth(0.55f)
+                                modifier = Modifier.fillMaxWidth(0.60f)
                             )
                             Image(
                                 painter = painterResource(id = R.drawable.hero_image),
                                 contentDescription = "Hero image",
                                 contentScale = ContentScale.Crop,
                                 modifier = Modifier
-                                    .width(140.dp)
-                                    .height(140.dp)
+                                    .width(130.dp)
+                                    .height(130.dp)
                                     .clip(RoundedCornerShape(12.dp))
                             )
                         }
@@ -153,11 +161,11 @@ fun Home(navController: NavController, database: MenuDao) {
                                     color = Color.White,
                                     shape = RoundedCornerShape(8.dp)
                                 )
-                                .background(color = Color.LightGray)
+                                .background(color = Color(0X33333333))
                         ) {
                             TextField(
                                 value = searchPhrase,
-                                placeholder = { Text(text = "Enter search phrase") },
+                                placeholder = { Text(text = "Enter search phrase", fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal))) },
                                 onValueChange = { it -> searchPhrase = it},
                                 leadingIcon = {
                                     Icon(
@@ -176,8 +184,9 @@ fun Home(navController: NavController, database: MenuDao) {
                 ) {
                     Text(
                         "ORDER FOR DELIVERY!",
+                        fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)),
                         fontWeight = FontWeight.ExtraBold,
-                        fontSize = 16.sp,
+                        fontSize = 18.sp,
                         modifier = Modifier.padding(vertical = 10.dp)
                     )
                     Row(
@@ -189,8 +198,8 @@ fun Home(navController: NavController, database: MenuDao) {
                                 searchCategory = "starters"
                             },
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color.LightGray,
-                                contentColor = Color.Black
+                                containerColor = Color(0X77AFAFAF),
+                                contentColor = Color(0XFF333333)
                             ),
                             shape = RoundedCornerShape(16.dp),
                             contentPadding = PaddingValues(
@@ -202,6 +211,8 @@ fun Home(navController: NavController, database: MenuDao) {
                         ) {
                             Text(
                                 "Starters",
+                                fontWeight = FontWeight.Bold,
+                                fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)),
                             )
                         }
 
@@ -210,8 +221,8 @@ fun Home(navController: NavController, database: MenuDao) {
                                 searchCategory = "mains"
                             },
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color.LightGray,
-                                contentColor = Color.Black
+                                containerColor = Color(0X77AFAFAF),
+                                contentColor = Color(0XFF333333)
                             ),
                             shape = RoundedCornerShape(16.dp),
                             contentPadding = PaddingValues(
@@ -223,6 +234,8 @@ fun Home(navController: NavController, database: MenuDao) {
                         ) {
                             Text(
                                 "Mains",
+                                fontWeight = FontWeight.Bold,
+                                fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)),
                             )
                         }
 
@@ -231,8 +244,8 @@ fun Home(navController: NavController, database: MenuDao) {
                                 searchCategory = "desserts"
                             },
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color.LightGray,
-                                contentColor = Color.Black
+                                containerColor = Color(0X77AFAFAF),
+                                contentColor = Color(0XFF333333)
                             ),
                             shape = RoundedCornerShape(16.dp),
                             contentPadding = PaddingValues(
@@ -244,6 +257,8 @@ fun Home(navController: NavController, database: MenuDao) {
                         ) {
                             Text(
                                 "Desserts",
+                                fontWeight = FontWeight.Bold,
+                                fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)),
                             )
                         }
 
@@ -252,8 +267,8 @@ fun Home(navController: NavController, database: MenuDao) {
                                 searchCategory = "drinks"
                             },
                             colors = ButtonDefaults.buttonColors(
-                                containerColor = Color.LightGray,
-                                contentColor = Color.Black
+                                containerColor = Color(0X77AFAFAF),
+                                contentColor = Color(0XFF333333)
                             ),
                             shape = RoundedCornerShape(16.dp),
                             contentPadding = PaddingValues(
@@ -265,13 +280,15 @@ fun Home(navController: NavController, database: MenuDao) {
                         ) {
                             Text(
                                 "Drinks",
+                                fontWeight = FontWeight.Bold,
+                                fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)),
                             )
                         }
                     }
                 }
 
                 HorizontalDivider(
-                    color = Color.Gray,
+                    color = Color(0X55333333),
                     thickness = 1.dp,
                     modifier = Modifier.padding(vertical = 15.dp, horizontal = 20.dp)
                 )
@@ -313,9 +330,9 @@ fun MenuItem(title: String, price: String, description: String, image: String) {
     Column(modifier = Modifier.padding(start = 20.dp, end = 20.dp)) {
         Text(
             text = title,
-            fontWeight = FontWeight.Bold,
-            fontSize = 16.sp,
-            modifier = Modifier.padding(bottom = 5.dp)
+            fontFamily = FontFamily(Font(R.font.markazitext_regular, FontWeight.Normal)),
+            fontWeight = FontWeight.SemiBold,
+            fontSize = 21.sp
         )
 
         Row(
@@ -326,14 +343,16 @@ fun MenuItem(title: String, price: String, description: String, image: String) {
             Column(modifier = Modifier.fillMaxWidth(0.7f)) {
                 Text(
                     text = description,
+                    fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)),
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
-                    color = Color.Gray,
+                    color = Color(0X99333333),
                     modifier = Modifier.padding(bottom = 10.dp)
                 )
                 Text(
                     text = "$$price.00",
-                    color = Color.DarkGray,
+                    fontFamily = FontFamily(Font(R.font.karla_regular, FontWeight.Normal)),
+                    color = Color(0XFF333333),
                     fontWeight = FontWeight.Bold
                 )
             }
@@ -361,7 +380,7 @@ fun MenuItem(title: String, price: String, description: String, image: String) {
             }
         }
         HorizontalDivider(
-            color = Color.LightGray,
+            color = Color(0X33333333),
             thickness = 1.dp,
             modifier = Modifier.padding(vertical = 15.dp)
         )
