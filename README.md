@@ -41,6 +41,6 @@ Meta for designing all the Meta Android Developer courses and allowing me to sho
 Coursera team for hosting these courses on their platform.
 
 ## Contact
-GitHub: https://github.com/impoldev
-LinkedIn: https://www.linkedin.com/in/pabloolle/
-Email: contact@impol.dev
+- GitHub: https://github.com/impoldev
+- LinkedIn: https://www.linkedin.com/in/pabloolle/
+- Email: contact@impol.dev
