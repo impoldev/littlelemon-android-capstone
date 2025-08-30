@@ -15,17 +15,27 @@ Little Lemon is a sample restaurant app that allows users to explore menu items 
 
 1. **Onboarding Screen**  
    - First screen for new users.
-   - Introduces the app and its features.
+   - Introduces the app and asks for information.
+   ---
+   <img src="screenshots/2.png" width="220"/>
 
-2. **Main Screen**
+1. **Main Screen**
    - Accessible after login.
    - Includes a **hero section** and a **list of menu items**.
    - Menu items are fetched from a remote endpoint and stored in a local database.
+   - Items can be filtered.
+   ---
+   <p>
+      <img src="screenshots/1.png" width="220"/>
+      <img src="screenshots/3.png" width="220"/>
+   </p>
 
-3. **Profile Screen**
+2. **Profile Screen**
    - Displays logged-in user information.
    - Includes a **logout button**.
-
+   ---
+   <img src="screenshots/4.png" width="220"/>
+  
 ## Features
 
 - Smooth **navigation** between screens using Jetpack Navigation Compose.
